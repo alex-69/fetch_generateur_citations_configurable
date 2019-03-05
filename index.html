@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>genérateur de citations</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  
+    <form>
+          <label for="generateur_citations">Quel générateur de citations? ?</label><br />
+          <select name="Generateur_citations" id="generateur_citations">
+              <option value="generateur_starwars"> Citations star wars</option>
+              <option value="generateur_Oss117">Citations OSS 117</option>
+          </select>
+   </form>
+
+   <form>
+        <label for="nb_citations">combien de citations souhaitez-vous générer? ?</label><br />
+        <select name="nb_citations" id="nb_citations">
+            <option value="une">une</option>
+            <option value="deux">deux</option>
+            <option value="trois">trois</option>
+            <option value="quatre">quatre</option>
+            <option value="cinq">cinq</option>
+        </select>
+ </form>
+
+   <div>
+        <button> Generer des citations aléatoires</button>
+      
+    </div>
+
+    <div class= "citation"> </div>
+
+    </body>
+  <script>
+    const nbCitationChoisie = document.getElementById('nb_citations');
+    const CitationChoisie = document.getElementById('generateur_citations');
+    
+    const citationAffichee  = document.querySelector('.citation');
+
+    const para1 = document.createElement('p');
+    citationAffichee.appendChild(para1);
+
+    const para2 = document.createElement('p');
+    citationAffichee.appendChild(para2);
+
+    const para3 = document.createElement('p');
+    citationAffichee.appendChild(para3);
+
+    const para4 = document.createElement('p');
+    citationAffichee.appendChild(para4);
+
+    const para5 = document.createElement('p');
+    citationAffichee.appendChild(para5);
+
+
+
+    const BoutonGenerer  = document.querySelector('button');
+
+    BoutonGenerer.addEventListener('click', result);
+
+
+    function result(){
+  switch(CitationChoisie.value){
+    case "generateur_starwars":
+    generateurStarwars();
+    
+    break;
+    case "generateur_Oss117":
+    generateurOss117();
+    break;
+  };
+};
+
+function generateurStarwars() {
+  
+
+    fetch('citations.json')
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error("HTTP error, status = " + response.status);
+      }
+      return response.json();
+    })
+    .then(function(json) {
+  
+      class citationGenereeStarwars {
+        constructor (insertX, insertY, insertZ){
+       this.insertX = Math.floor(Math.random()*json.citations.length);
+       this.insertY = Math.floor(Math.random()*json.citations1.length);
+      this.insertZ = Math.floor(Math.random()*json.citations2.length);
+        };
+     citationGenereeStarwars1(){
+      para1.innerHTML = json.citations[this.insertX]
+        .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
+     };
+     citationGenereeStarwars2(){
+      para2.innerHTML = json.citations[this.insertX]
+        .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
+     };
+     citationGenereeStarwars3(){
+      para3.innerHTML = json.citations[this.insertX]
+        .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
+     };
+     citationGenereeStarwars4(){
+      para4.innerHTML = json.citations[this.insertX]
+        .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
+     };
+     citationGenereeStarwars5(){
+      para5.innerHTML = json.citations[this.insertX]
+        .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
+     };
+    };
+
+  function citationAfficheeStarwars1() {
+    let citationStarWars1 = new citationGenereeStarwars;
+    citationStarWars1.citationGenereeStarwars1();
+  };
+
+  function citationAfficheeStarwars2() {
+    let citationStarWars2 = new citationGenereeStarwars;
+    citationStarWars2.citationGenereeStarwars2();
+  };
+
+  function citationAfficheeStarwars3() {
+    let citationStarWars3 = new citationGenereeStarwars;
+    citationStarWars3.citationGenereeStarwars3();
+  };
+
+  function citationAfficheeStarwars4() {
+    let citationStarWars4 = new citationGenereeStarwars;
+    citationStarWars4.citationGenereeStarwars4();
+  };
+
+  function citationAfficheeStarwars5() {
+    let citationStarWars5 = new citationGenereeStarwars;
+    citationStarWars5.citationGenereeStarwars5();
+  };
+
+
+    switch (nbCitationChoisie.value) {
+    case "une":
+    citationAfficheeStarwars1();
+      para1.style.display = "block";
+      para2.style.display = "none";
+      para3.style.display = "none";
+      para4.style.display = "none";
+      para5.style.display = "none";
+      break;
+    case "deux":
+    citationAfficheeStarwars1();
+    citationAfficheeStarwars2();
+      para1.style.display = "block";
+      para2.style.display = "block";
+      para3.style.display = "none";
+      para4.style.display = "none";
+      para5.style.display = "none";
+      break;
+    case "trois":
+    citationAfficheeStarwars1();
+    citationAfficheeStarwars2();
+    citationAfficheeStarwars3();
+      para1.style.display = "block";
+      para2.style.display = "block";
+      para3.style.display = "block";
+      para4.style.display = "none";
+      para5.style.display = "none";
+      break;
+    case "quatre":
+    citationAfficheeStarwars1();
+    citationAfficheeStarwars2();
+    citationAfficheeStarwars3();
+    citationAfficheeStarwars4();
+      para1.style.display = "block";
+      para2.style.display = "block";
+      para3.style.display = "block";
+      para4.style.display = "block";
+      para5.style.display = "none";
+      break;
+    case "cinq":
+    citationAfficheeStarwars1();
+    citationAfficheeStarwars2();
+    citationAfficheeStarwars3();
+    citationAfficheeStarwars4();
+    citationAfficheeStarwars5();
+      para1.style.display = "block";
+      para2.style.display = "block";
+      para3.style.display = "block";
+      para4.style.display = "block";
+      para5.style.display = "block";
+      break;
+    };
+  })  
+  
+};
+
+
+  </script>
+</html>
