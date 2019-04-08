@@ -1,6 +1,6 @@
-function generateurStarwars() {
+function generateurOss117() {
   
-    fetch('citationStarwars.json')
+    fetch('citationOss117.json')
     .then(function(response) {
       if (!response.ok) {
         throw new Error("HTTP error, status = " + response.status);
@@ -9,74 +9,74 @@ function generateurStarwars() {
     })
     .then(function(json) {
   
-      class citationGenereeStarwars {
+      class citationGenereeOss117 {
         constructor (insertX, insertY, insertZ){
        this.insertX = Math.floor(Math.random()*json.citations.length);
        this.insertY = Math.floor(Math.random()*json.citations1.length);
       this.insertZ = Math.floor(Math.random()*json.citations2.length);
         };
-     citationGenereeStarwars1(){
+     citationGenereeOss1171(){
       para1.innerHTML = json.citations[this.insertX]
         .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
      };
-     citationGenereeStarwars2(){
+     citationGenereeOss1172(){
       para2.innerHTML = json.citations[this.insertX]
         .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
      };
-     citationGenereeStarwars3(){
+     citationGenereeOss1173(){
       para3.innerHTML = json.citations[this.insertX]
         .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
      };
-     citationGenereeStarwars4(){
+     citationGenereeOss1174(){
       para4.innerHTML = json.citations[this.insertX]
         .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
      };
-     citationGenereeStarwars5(){
+     citationGenereeOss1175(){
       para5.innerHTML = json.citations[this.insertX]
         .phrase + " - " + json.citations1[this.insertY].phrase + " - " + json.citations2[this.insertZ].phrase;
      };
     };
 
-  function citationAfficheeStarwars1() {
-    let citationStarWars1 = new citationGenereeStarwars;
-    citationStarWars1.citationGenereeStarwars1();
+  function citationAfficheeOss1171() {
+    let citationOss1171 = new citationGenereeOss117;
+    citationOss1171.citationGenereeOss1171();
   };
 
-  function citationAfficheeStarwars2() {
-    let citationStarWars2 = new citationGenereeStarwars;
-    citationStarWars2.citationGenereeStarwars2();
+  function citationAfficheeOss1172() {
+    let citationOss1172 = new citationGenereeOss117;
+    citationOss1172.citationGenereeOss1172();
   };
 
-  function citationAfficheeStarwars3() {
-    let citationStarWars3 = new citationGenereeStarwars;
-    citationStarWars3.citationGenereeStarwars3();
+  function citationAfficheeOss1173() {
+    let citationOss1173 = new citationGenereeOss117;
+    citationOss1173.citationGenereeOss1173();
   };
 
-  function citationAfficheeStarwars4() {
-    let citationStarWars4 = new citationGenereeStarwars;
-    citationStarWars4.citationGenereeStarwars4();
+  function citationAfficheeOss1174() {
+    let citationOss1174 = new citationGenereeOss117;
+    citationOss1174.citationGenereeOss1174();
   };
 
-  function citationAfficheeStarwars5() {
-    let citationStarWars5 = new citationGenereeStarwars;
-    citationStarWars5.citationGenereeStarwars5();
+  function citationAfficheeOss1175() {
+    let citationOss1175 = new citationGenereeOss117;
+    citationOss1175.citationGenereeOss1175();
   };
 
   /*const texte = document.createTextNode('Citations Star Wars!')*/
 
     switch (nbCitationChoisie.value) {
     case "une":
-    citationAfficheeStarwars1();
-    para1.style.display = "block";
-    para2.style.display = "none";
-    para3.style.display = "none";
-    para4.style.display = "none";
-    para5.style.display = "none";
-      /*para6.appendChild(texte);*/
-      break;
+    citationAfficheeOss1171();
+      para1.style.display = "block";
+      para2.style.display = "none";
+      para3.style.display = "none";
+      para4.style.display = "none";
+      para5.style.display = "none";
+      /*para6.appendChild(texte);
+      break;*/
     case "deux":
-    citationAfficheeStarwars1();
-    citationAfficheeStarwars2();
+    citationAfficheeOss1171();
+    citationAfficheeOss1172();
       para1.style.display = "block";
       para2.style.display = "block";
       para3.style.display = "none";
@@ -84,9 +84,9 @@ function generateurStarwars() {
       para5.style.display = "none";
       break;
     case "trois":
-    citationAfficheeStarwars1();
-    citationAfficheeStarwars2();
-    citationAfficheeStarwars3();
+    citationAfficheeOss1171();
+    citationAfficheeOss1172();
+    citationAfficheeOss1173();
       para1.style.display = "block";
       para2.style.display = "block";
       para3.style.display = "block";
@@ -94,10 +94,10 @@ function generateurStarwars() {
       para5.style.display = "none";
       break;
     case "quatre":
-    citationAfficheeStarwars1();
-    citationAfficheeStarwars2();
-    citationAfficheeStarwars3();
-    citationAfficheeStarwars4();
+    citationAfficheeOss1171();
+    citationAfficheeOss1172();
+    citationAfficheeOss1173();
+    citationAfficheeOss1174();
       para1.style.display = "block";
       para2.style.display = "block";
       para3.style.display = "block";
@@ -105,11 +105,11 @@ function generateurStarwars() {
       para5.style.display = "none";
       break;
     case "cinq":
-    citationAfficheeStarwars1();
-    citationAfficheeStarwars2();
-    citationAfficheeStarwars3();
-    citationAfficheeStarwars4();
-    citationAfficheeStarwars5();
+    citationAfficheeOss1171();
+    citationAfficheeOss1172();
+    citationAfficheeOss1173();
+    citationAfficheeOss1174();
+    citationAfficheeOss1175();
       para1.style.display = "block";
       para2.style.display = "block";
       para3.style.display = "block";

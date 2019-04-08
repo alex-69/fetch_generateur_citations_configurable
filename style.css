@@ -1,0 +1,84 @@
+body{
+    background-image: url("../fetch_generateur_citations_configurable/images/star-wars.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    line-height: 400%;
+    
+    
+}
+body{
+    color: white;
+    margin-left: 30px;
+    margin-top: 30px;
+    line-height: 400%;
+}
+
+
+
+#choix{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    
+}
+
+h1{
+font-style: italic;
+}
+
+.citation{
+    color: black;
+    font-style: italic;
+}
+
+.select-style {
+    border: 1px solid #ccc;
+    width: 130px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("images/icon-select.png") no-repeat 100% 60%;
+    line-height: normal;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+button{
+   
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: darkred;
+    color: white;
+    margin: auto;
+    position: relative;
+    display: block;
+    top: 50px;
+    right: 50px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.modal{
+    line-height: 200%;
+}
+p{
+    border-top: 1px solid black;
+}
